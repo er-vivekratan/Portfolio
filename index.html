@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vivek Ratan — Portfolio</title>
+  <meta name="description" content="Portfolio of Vivek Ratan — ECE + AI/ML student and BCI enthusiast. Projects, skills, and contact in a single stylish, animated page." />
+  <meta property="og:title" content="Vivek Ratan — Portfolio" />
+  <meta property="og:description" content="ECE + AI/ML student and BCI enthusiast. Explore projects and skills." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-HK5fgLBL+x7Yh2P5T1BkPCEZ0aKBd0x0s9Q6h9W7cE4b8kQ2U8F/6v1J8i0pYp4vZy5uV6VQ9Z2Q5q5Vv3u3ug==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#home" class="brand">&lt;<span>Vivek</span>/&gt;</a>
+      <ul>
+        <li><a href="#about" class="navlink">About</a></li>
+        <li><a href="#skills" class="navlink">Skills</a></li>
+        <li><a href="#projects" class="navlink">Projects</a></li>
+        <li><a href="#timeline" class="navlink">Timeline</a></li>
+        <li><a href="#contact" class="navlink">Contact</a></li>
+      </ul>
+      <button id="themeToggle" class="theme-toggle" title="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero">
+    <div class="pill"><i class="fa-solid fa-sparkles"></i><img src="" alt="Profile" style="float: left; height: 200px; width: auto; min-width: 150px;"></img></div>
+    <div class="container hero-grid" style="float: right;">
+      <div class="reveal">
+        <h1 class="headline">I'm <span style="background:linear-gradient(90deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent">Vivek Ratan</span></h1>
+        <p class="subtitle">B.Tech (ECE – AI/ML) student • BCI enthusiast • Ubuntu user who loves building helpful tech for accessibility.</p>
+        <div class="cta">
+          <a class="btn primary" href="#projects"><i class="fa-solid fa-rocket-launch"></i> View Projects</a>
+          <a class="btn" href="resume.pdf" download><i class="fa-solid fa-file-arrow-down"></i> Download Résumé</a>
+          <a class="btn ghost" href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+        </div>
+      </div>
+      <!--div class="hero-art reveal" aria-hidden="true">
+        <div class="orb one" data-parallax="-18"></div>
+        <div class="orb two" data-parallax="14"></div>
+        <div class="orb three" data-parallax="8"></div>
+      </div-->
+    </div>
+    <div class="scroll-indicator">
+      <div class="mouse"></div>
+      <span>Scroll</span>
+    </div>
+  </header>
+
+  <!-- TIMELINE -->
+  <section id="timeline">
+    <div class="container">
+      <h2 class="section-title">Timeline</h2>
+      <p class="section-sub">Education & milestones so far.</p>
+      <div class="timeline">
+        <div class="t-item card reveal">
+          <h3 class="t-title">Gautam Buddha University — B.Tech ECE (AI/ML)</h3>
+          <div class="t-meta">2024 – Present</div>
+          <p>Focusing on AI/ML, signal processing, and assistive technology projects.</p>
+        </div>
+        <div class="t-item card reveal">
+          <h3 class="t-title">12th (Math)</h3>
+          <div class="t-meta">2022</div>
+          <p>Completed senior secondary with mathematics foundation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-sub">Open to internships, collaborations, and interesting problems.</p>
+      <div class="contact-grid">
+        <form class="card form reveal" onsubmit="event.preventDefault(); window.location.href=`mailto:vivek@example.com?subject=${encodeURIComponent('Portfolio Contact')}&body=${encodeURIComponent(document.getElementById('msg').value)}`;">
+          <div style="display:flex; gap:12px; flex-wrap:wrap">
+            <input class="input" type="text" placeholder="Your name" required>
+            <input class="input" type="email" placeholder="Email address" required>
+          </div>
+          <textarea id="msg" class="input" placeholder="Your message"></textarea>
+          <button class="btn primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+          <small style="color:var(--muted)">Or email me directly: <a href="mailto:vivek@example.com">vivek@example.com</a></small>
+        </form>
+        <div class="card reveal">
+          <h3 style="margin-top:0">Find me online</h3>
+          <p class="section-sub" style="margin-top:0">Profiles & links.</p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap">
+            <a class="btn" href="#" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a class="btn" href="#" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a class="btn" href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i> Twitter</a>
+            <a class="btn" href="#" target="_blank"><i class="fa-brands fa-hackerrank"></i> HackerRank</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="padding:30px 20px; text-align:center; color:var(--muted); border-top:1px solid rgba(255,255,255,.06)">
+    © <span id="year"></span> Vivek Ratan • Built with ♥ and a lot of curiosity.
+  </footer>
+
+  <button id="toTop" class="to-top" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script>
+    // Smooth active link highlight (scroll spy)
+    const sections = [...document.querySelectorAll('section, header.hero')];
+    const navlinks = [...document.querySelectorAll('.navlink')];
+    const spy = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){
+          const id = e.target.getAttribute('id');
+          navlinks.forEach(a=>a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+        }
+      })
+    },{ threshold:.4 });
+    sections.forEach(s=>spy.observe(s));
+
+    // Reveal on scroll
+    const rev = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('show'); rev.unobserve(e.target); } });
+    },{ threshold:.2, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.reveal').forEach(el=>rev.observe(el));
+
+    // Parallax orbs in hero
+    const orbs = document.querySelectorAll('[data-parallax]');
+    document.addEventListener('mousemove', (e)=>{
+      const x = (e.clientX / window.innerWidth - .5) * 2;
+      const y = (e.clientY / window.innerHeight - .5) * 2;
+      orbs.forEach(orb=>{
+        const d = parseFloat(orb.dataset.parallax);
+        orb.style.transform = `translate(${x * d}px, ${y * d}px)`;
+      });
+    });
+
+    // Back to top
+    const toTop = document.getElementById('toTop');
+    window.addEventListener('scroll', ()=>{
+      if(window.scrollY > 500){ toTop.classList.add('show'); } else { toTop.classList.remove('show'); }
+    });
+    toTop.addEventListener('click', ()=> window.scrollTo({ top:0, behavior:'smooth' }));
+
+    // Fill current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme toggle (simple light/dark by toggling body class)
+    const toggle = document.getElementById('themeToggle');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const saved = localStorage.getItem('theme');
+    if(saved === 'light') document.body.classList.add('light');
+
+    toggle.addEventListener('click', ()=>{
+      document.body.classList.toggle('light');
+      localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+    });
+
+    // Light theme variables applied via CSSOM for brevity
+    const applyLight = ()=>{
+      const r = document.documentElement;
+      r.style.setProperty('--bg', '#f8fafc');
+      r.style.setProperty('--bg-soft', '#ffffff');
+      r.style.setProperty('--glass', 'rgba(0,0,0,0.06)');
+      r.style.setProperty('--card', 'rgba(255,255,255,0.9)');
+      r.style.setProperty('--txt', '#0b1220');
+      r.style.setProperty('--muted', '#4b5563');
+      r.style.setProperty('--shadow', '0 10px 30px rgba(0,0,0,.08)');
+    }
+    const applyDark = ()=>{ location.reload(); } // quick reset for demo; keeps CSS above as dark defaults
+
+    const observer = new MutationObserver(()=>{
+      if(document.body.classList.contains('light')) applyLight(); else applyDark();
+    });
+    observer.observe(document.body, { attributes:true, attributeFilter:['class'] });
+
+    // Animate skill meters when skills section enters view
+    const meters = document.querySelectorAll('#skills .meter > span');
+    const mObs = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{ if(e.isIntersecting){
+        e.target.querySelectorAll('.meter > span').forEach(s=>{
+          s.style.width = s.getAttribute('style').match(/width:\s*([0-9]+%)/)[1];
+        });
+        mObs.unobserve(e.target);
+      }});
+    },{ threshold:.3 });
+    mObs.observe(document.getElementById('skills'));
+  </script>
+</body>
+</html>
