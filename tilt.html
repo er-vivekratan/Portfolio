@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>45° Tilt Box Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 40px;
+        }
+        
+        .content {
+            flex: 1;
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        
+        p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .tilt-box-wrapper {
+            width: 350px;
+            position: relative;
+            perspective: 1000px;
+        }
+        
+        .tilt-box {
+            width: 100%;
+            background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+            border-radius: 16px;
+            padding: 30px;
+            color: white;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            transform: rotate(45deg);
+            position: relative;
+            overflow: hidden;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .tilt-content {
+            transform: rotate(-45deg);
+            width: 100%;
+        }
+        
+        .tilt-box h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .tilt-box p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+        
+        .tilt-box .icon {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        
+        .tilt-box .btn {
+            display: inline-block;
+            background: white;
+            color: #6a11cb;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tilt-box .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .tilt-box-wrapper {
+                width: 300px;
+                margin-top: 40px;
+            }
+            
+            .tilt-box {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Fixed Tilt Box Design</h1>
+            <p>This page features a box tilted at a 45-degree angle on the right side. Unlike the interactive tilt box that responds to mouse movement, this box has a fixed rotation that adds visual interest to the page layout.</p>
+            <p>The tilted element creates a dynamic design that breaks from traditional rectangular layouts, drawing attention to important content or calls to action.</p>
+            <p>This design approach works well for showcasing featured products, special promotions, or important notifications in a visually striking way.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eu ultricies lacinia, nunc nisl aliquam nisl, eu aliquam nisl nunc eu nisl. Nullam auctor, nisl eu ultricies lacinia, nunc nisl aliquam nisl, eu aliquam nisl nunc eu nisl.</p>
+        </div>
+        
+        <div class="tilt-box-wrapper">
+            <div class="tilt-box">
+                <div class="tilt-content">
+                    <div class="icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h2>Creative Design</h2>
+                    <p>This box is permanently tilted at a 45-degree angle for a unique visual effect</p>
+                    <a href="#" class="btn">Explore Features</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple animation for page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const tiltBox = document.querySelector('.tilt-box');
+            tiltBox.style.transition = 'transform 0.8s ease';
+            tiltBox.style.transform = 'rotate(0deg)';
+            
+            setTimeout(function() {
+                tiltBox.style.transform = 'rotate(45deg)';
+            }, 100);
+        });
+    </script>
+</body>
+</html>

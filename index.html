@@ -35,7 +35,7 @@
 
   <!-- HERO -->
   <header id="home" class="hero">
-    <div class="pill"><i class="fa-solid fa-sparkles"></i><img src="" alt="Profile" style="float: left; height: 200px; width: auto; min-width: 150px;"></img></div>
+    <div class="pill"><i class="fa-solid fa-sparkles"></i><img src="profile-bg.png" alt="Profile" style="float: left; height: 200px; width: 150px; min-width: 75px; min-height: 100px;"></img></div>
     <div class="container hero-grid" style="float: right;">
       <div class="reveal">
         <h1 class="headline">I'm <span style="background:linear-gradient(90deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent">Vivek Ratan</span></h1>
@@ -52,7 +52,13 @@
         <div class="orb three" data-parallax="8"></div>
       </div-->
     </div>
-    <div class="scroll-indicator">
+    <img src="brain-bg.png" style="float: right; height: 400px; width: auto; min-width: 150px; margin: -300px -50px 0 0;"></img>
+    <div class="tilt-box-wrapper" style="float: right; margin: -250px -450px 0 0;">
+            <div class="tilt-box">
+                <img src="brain-bg.png" style="float: right; height: 50%; width: auto; min-width: 150px; margin: 150px 250px 0 0; transform: rotate(-45deg);"></img>
+            </div>
+    </div>
+    <div class="scroll-indicator" style="height: 100px;"</div>
       <div class="mouse"></div>
       <span>Scroll</span>
     </div>
@@ -195,5 +201,50 @@
     },{ threshold:.3 });
     mObs.observe(document.getElementById('skills'));
   </script>
+
+  <style>    
+  
+        nav {
+          background-color: #000; /* Dark/white background for the navbar */
+        }
+        
+        .tilt-box {
+            width: 750px;
+            /*background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);*/
+            background-color: #000;
+            border-radius: 16px;
+            padding: 30px;
+            color: white;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            transform: rotate(45deg);
+            position: relative;
+            overflow: hidden;
+            height: 1000px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: -200px -250px 0 0;
+            border-bottom-right-radius: 1000px;
+        }
+            
+        @media (max-width: 900px) {
+
+        }
+    </style>
+        <script>
+        // Simple animation for page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const tiltBox = document.querySelector('.tilt-box');
+            tiltBox.style.transition = 'transform 0.8s ease';
+            tiltBox.style.transform = 'rotate(0deg)';
+            
+            setTimeout(function() {
+                tiltBox.style.transform = 'rotate(45deg)';
+            }, 100);
+        });
+    </script>
+
 </body>
 </html>
